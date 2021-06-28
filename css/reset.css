@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Sawarabi Mincho";
+  color: #333;
+}
+
+#globalnav {
+  width: 80px;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  z-index: 10;
+}
+
+#globalnav li a{
+  /* writing-mode: vertical-rl; */
+  display: block;
+  margin-bottom: 13px;
+  padding: 4px 8px;
+  background: rgba(255,255,255,.2);
+  color: #333;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  border: 1px solid #333;
+  border-right: none;
+  border-radius: 0%;
+  cursor: pointer;
+}
+#globalnav li a:hover {
+  background: rgba(255,255,255,.8);
+
+  /* color: white; */
+  /* border: 1px solid  transparent; */
+
+}

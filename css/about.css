@@ -1,0 +1,184 @@
+body{
+  font-size: 16px;
+  /* font-family: Georgia, 'Times New Roman', 'YuMincho', Times, serif; */
+  font-family: 'fot-tsukuardgothic-std', sans-serif;
+  color: #333;
+}
+
+section{
+  background: rgb(206,221,219);
+  background: linear-gradient(45deg, rgba(206,221,219,1) 0%, rgba(206,250,219,1) 100%);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+section:nth-child(even){
+  background: rgb(206,221,219);
+  background: linear-gradient(180deg, rgba(206,221,219,1) 0%, rgba(206,250,219,1) 100%);
+}
+
+/* fullpage */
+.section h1{
+  font-size: 40px;
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 5%;
+  left: 3%;
+}
+.section:nth-child(even) h1{
+  right: 5%;
+}
+.description {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.pgraph {
+  margin-bottom: 3rem;
+  width: 30%;
+  margin-left: 5%;
+  font-size: 16px;
+}
+.section:nth-child(even) .pgraph{
+  margin-left: 0%;
+  margin-right: 5%;
+}
+
+.description p{
+  margin: 1rem 0;
+}
+.dImg{
+  width: 50%;
+  max-height: 80%;
+}
+.dImg.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.dImg.flex > div > img {
+  width: 100%;
+  /* margin: 10px; */
+}
+
+.dImg > img {
+  width: 100%;
+}
+.btnContents {
+  padding: 1rem;
+  padding-left: 0;
+  /* background: #333; */
+  color: #647516;
+  cursor: pointer;
+  transition: .2s;
+  transition: transform .5s ease;
+}
+.btnContents::after{
+  content: ' →';
+  font-family: cursive;;
+}
+.btnContents:hover {
+  transform: translateX(20px);
+}
+
+.btnContents a{
+  color: #647516;
+
+}
+
+
+/* スライドショー */
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  width:94%;
+  opacity: 0;
+}
+.slick-initialized {
+  opacity: 1;
+}
+
+.slider img {
+  width:30vw;
+  height:auto;
+}
+
+.slider p {
+  width:30vw;
+  height:auto;
+}
+
+.slider .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;/*矢印の色*/
+  border-right: 2px solid #666;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align:center;
+margin:20px 0 0 0;
+}
+
+.slick-dots li {
+  display:inline-block;
+margin:0 5px;
+}
+
+.slick-dots button {
+  border-radius: 50%;
+  font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    /* margin: 5px; */
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: white;
+    opacity: .2;
+}
+
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
+  opacity: 1;
+}
+

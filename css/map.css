@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  background: turquoise;
+}
+section#mainImg{
+  height: 90vh;
+  width: 90vh;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.jmap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.jmap > .jmapImg{
+  height: auto;
+  width: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+[id^='loc'].iconShow {
+  transform-origin: center center;
+  transform: scale(1);
+}
+
+[id^='loc'] {
+  position: absolute;
+  width: 4%;
+  transform-origin: center center;
+  transform: scale(0);
+  transition: .2s;
+  opacity: .8;
+  cursor: pointer;
+}
+[id^='loc'].iconShow:hover{
+  transform: scale(1.5);
+}
+
+
+#loc1{top: 8%;left: 60%;}
+#loc2{top: 14%;left: 62%;}
+#loc3{top: 12%;left: 67%;}
+#loc4{top: 16%;left: 59%;}
+#loc5{top: 17%;left: 64%;}
+#loc6{top: 17%;left: 68%;}
+#loc7{top: 19%;left: 58%;}
+#loc8{top: 22%;left: 57%;}
+#loc9{top: 26%;left: 57%;}
+#loc10{top: 29.5%;left: 55%;}
+#loc11{top: 29.5%;left: 58.5%;}
+#loc12{top: 35%;left: 55.5%;}
+#loc13{top: 35%;left: 57.5%;}
+#loc14{top: 37%;left: 56.5%;}
+#loc15{top: 36.5%;left: 52%;}
+#loc16{top: 41.8%;left: 44.5%;}
+#loc17{top: 41%;left: 46%;}
+#loc18{top: 41%;left: 49.3%;}
+#loc19{top: 41.5%;left: 54.4%;}
+#loc20{top: 43%;left: 43%;}
+#loc21{top: 42%;left: 52%;}
+#loc22{top: 44%;left: 53.5%;}
+#loc23{top: 42%;left: 56.2%;}
+#loc24{top: 45.8%;left: 44.8%;}
+#loc25{top: 47%;left: 45%;}
+#loc26{top: 44.8%;left: 50.2%;}
+#loc27{top: 44.8%;left: 57.3%;}
+#loc28{top: 48.5%;left: 44%;}
+#loc29{top: 47.5%;left: 49.8%;}
+#loc30{top: 44.8%;left: 54%;}
+#loc31{top: 45.4%;left: 53.5%;}
+#loc32{top: 45.5%;left: 33.5%;}
+#loc33{top: 45.3%;left: 37%;}
+#loc34{top: 45.3%;left: 40.4%;}
+#loc35{top: 47%;left: 42%;}
+#loc36{top: 46.5%;left: 43%;}
+#loc37{top: 51%;left: 27%;}
+#loc38{top: 49.5%;left: 31.8%;}
+#loc39{top: 48.5%;left: 36.5%;}
+#loc40{top: 48.5%;left: 40%;}
+#loc41{top: 48.5%;left: 41%;}
+#loc42{top: 50.5%;left: 40%;}
+#loc43{top: 48.5%;left: 44%;}
+#loc44{top: 52.5%;left: 25.5%;}
+#loc45{top: 54%;left: 25%;}
+#loc46{top: 54%;left: 29%;}
+#loc47{top: 56%;left: 24%;}
+#loc48{top: 55.5%;left: 26.5%;}
+#loc49{top: 60%;left: 26%;}
+#loc50{top: 59.3%;left: 28.7%;}
+#loc51{top: 51.7%;left: 32.9%;}
+#loc52{top: 50%;left: 36.8%;}
+#loc53{top: 53%;left: 34.8%;}
+#loc54{top: 51%;left: 38%;}
+#loc55{top: 72.3%;left: 22.8%;}
+#loc56{top: 87%;left: 6.6%;}
+#loc57{top: 85.8%;left: 10.1%;}
+#loc58{top: 80.4%;left: 17.2%;}
+#loc59{top: 80.3%;left: 25%;}
+
+/* スライダー */
+.dateSlider {
+  width: 100%;
+}
+input[type="range"].inputRange {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.15);
+  height: 20px;
+  width: 100%;
+  border-radius: 10px;
+  outline: 0;
+  z-index: -1;
+}
+/* input[type="range"].inputRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: rgb(125, 158, 60);
+  width: 20px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); 
+} */
+/* Moz向けのつまみ */
+input[type="range"].inputRange::-moz-range-thumb {
+  background: #53aeff; 
+  width: 10px; 
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+/* Firefoxで点線が周りに表示されてしまう問題の解消 */
+input[type="range"].inputRange::-moz-focus-outer {
+  border: 0;
+}
+/* つまみをドラッグしているときのスタイル */
+input[type="range"].inputRange:active::-webkit-slider-thumb {
+  /* box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3); */
+  border-radius: 50%;
+}
+
+/* シンボル */
+.symbol {
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+}
+
+.symbol ul{
+  display: flex; 
+  /* flex-direction: column; */
+}
+
+.symbol li{
+  width: calc(100% / 27) ;
+  padding: 0.2rem 0.5rem;
+  /* background: #eee; */
+  border: 1px solid #eee;
+  border-radius: 0 0 20px 20px;
+  cursor: pointer;
+}
+
+[class^="svgColor"] path,
+[class^="svgColor"] polygon,
+[class^="svgColor"] circle,
+[class^="svgColor"] ellipse{
+  color: #eee; 
+  fill: currentColor;
+}
