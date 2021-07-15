@@ -66,6 +66,7 @@ section:nth-child(even){
 .dImg > img {
   width: 100%;
 }
+
 .btnContents {
   padding: 1rem;
   padding-left: 0;
@@ -85,7 +86,6 @@ section:nth-child(even){
 
 .btnContents a{
   color: #647516;
-
 }
 
 
@@ -105,6 +105,10 @@ section:nth-child(even){
   width:30vw;
   height:auto;
 }
+#method01 {
+  padding-top: 150px;
+  height: 50vh;
+}
 
 .slider p {
   width:30vw;
@@ -121,7 +125,6 @@ opacity: 0.5;/*透過50%*/
 transform: scale(1);/*中央の画像のサイズだけ等倍に*/
 opacity: 1;/*透過なし*/
 }
-
 
 /*矢印の設定*/
 
@@ -182,3 +185,69 @@ margin:0 5px;
   opacity: 1;
 }
 
+.pgraph ol > li{
+  list-style-type: decimal;
+  padding: 10px 0;
+}
+.pgraph ul{
+  padding-left: 1rem;
+}
+.pgraph ul> li{
+  list-style-type: circle;
+  font-size: 14px;
+}
+
+@media  screen and (max-width:768px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .pgraph {
+    margin-bottom: 1rem;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 16px;
+  }
+  .dImg{
+    padding-top: 3rem;
+    width: 90%;
+    max-height: 40%;
+  }
+  .section h1{
+    font-size: 2rem;
+    color: rgba(30,30,30,.4);
+    top: 0%;
+    left: -1%;
+  }
+
+
+  .slider p {
+    font-size: .5rem;
+  }
+  .dImg.flex > div > img {
+    max-height: 220px;
+    /* margin: 10px; */
+  }
+  section.s4 .description .pgraph {
+    margin-left: 4rem;
+    padding-bottom: 2rem;
+  }
+  .slider .slick-slide {
+    transform: scale(0.7);/*左右の画像のサイズを80%に*/
+    transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5;/*透過50%*/
+    }
+    .pgraph ul{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+    .pgraph ul> li{
+      padding-right: 3rem;
+    }
+    
+}

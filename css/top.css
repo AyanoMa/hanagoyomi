@@ -1,8 +1,23 @@
 body {
    /* animation: bgchange00-03 20s ease infinite alternate; */
    font-family: "Sawarabi Mincho";
+   overflow-x: hidden;
+   overflow-y: hidden;
 }
-
+header .nav-links {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  right: -31%;
+}
+@media screen and (max-width:768px) {
+  header .nav-links
+  {
+    right: 0;
+  }
+}
 /* svg */
 
 .st0{fill:#94A04B;}
@@ -94,6 +109,12 @@ h2 {
   transform: translate(0, -50px);
 }
 
+#modal > p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
 #modal a{
   color: #c5f7e3;
 }
@@ -104,7 +125,9 @@ h2 {
 nav + p {
   margin-top: 2rem;
 }
-
+.contentNav{
+  background: rgba(255,255,255,.3);
+}
 nav > ul{
   display: flex; 
   justify-content: center;
@@ -122,4 +145,27 @@ nav > ul > li{
   color: beige;
 }
 
+@media (max-width: 767px){
+  #titleWord{
+    width: 20vw;
+  }
+  #modal {
+    background: linear-gradient(45deg ,#222,#555);
+    opacity: .8;
+    color: white;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: .5s;
+  }
+  nav > ul{
+    display: flex; 
+    flex-direction: column;
+  }
+}
 

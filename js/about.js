@@ -1,27 +1,37 @@
-new fullpage('#fullpage',{
-  autoScrolling: true,
-  navigation: true,
-  loopTop: true,
-  loopBottom: true,
-  // anchors: ['overview', 'theme', 'aim', 'method'],
-  onLeave:(origin,destination,direction) => {
-    const section = destination.item;
-    const title = section.querySelector('h1');
-    const tl = new TimelineMax({delay: 0.5});
-    tl.fromTo(title, 0.5, {y: '50', opacity: 0 }, {y: 0, opacity: 1});
-    
-    if(destination.index === 1){
-      const desctiption = document.querySelector('.description');
-
-    }
-  }
+jQuery(function () {
+  jQuery('#fullpage').fullpage({
+      autoScrolling: true,
+      navigation: true,
+      loopTop: true,
+      loopBottom: true,
+  });
 });
+
+// new fullpage('#fullpage',{
+//   autoScrolling: true,
+//   navigation: true,
+//   loopTop: true,
+//   loopBottom: true,
+//   // anchors: ['overview', 'theme', 'aim', 'method'],
+//   onLeave:(origin,destination,direction) => {
+//     const section = destination.item;
+//     const title = section.querySelector('h1');
+//     const tl = new TimelineMax({delay: 0.5});
+//     tl.fromTo(title, 0.5, {y: '50', opacity: 0 }, {y: 0, opacity: 1});
+    
+//     if(destination.index === 1){
+//       const desctiption = document.querySelector('.description');
+
+//     }
+//   }
+// });
 
 // スライドショー
 
 $('.slider').slick({
   autoplay: true,//自動的に動き出すか。初期値はfalse。
   infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+  autoplaySpeed: 5000,
   speed: 1500,//スライドのスピード。初期値は300。
   slidesToShow: 3,//スライドを画面に3枚見せる
   slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる

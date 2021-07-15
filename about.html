@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/fullpage.min.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="./css/fullpage.min.css"> -->
+  <link rel="stylesheet" href="css/jquery.fullpage.min.css">
   <link rel="stylesheet" type="text/css" href="./css/reset.css" >
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">  
   <link rel="stylesheet" type="text/css" href="./css/about.css" >
@@ -13,15 +14,25 @@
 <body>
   <header>
     <nav>
-      <div id="globalnav">
-        <ul>
-          <li><a href="index.html">TOP</a></li>
-          <li><a href="#">概要</a></li>
-          <li><a href="./contents/index.html">製作物</a></li>
-        </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
+        <ul class="nav-links">
+          <li><a href="index.html">TOP</a></li>
+          <li><a class="current" href="#">概要</a></li>
+          <li><a href="./contents/index.html">製作物</a>
+            <ul>
+              <li><a href="contents/map/index.html">開花前線の時間</a></li>
+              <li><a href="contents/zukan/index.html" >植物の一年</a></li>
+              <li><a href="contents/clock/index.html" >植物の一日</a></li>
+            </ul>
+          </li>
+        </ul>
     </nav>
   </header>
+
   <main>
     <div id="fullpage">
       <section id="overview" class="section s1">
@@ -43,16 +54,16 @@
           </div>
           <div class="dImg">
             <ul class="slider">
-              <li><img src="img/change.png" alt=""></li>
-              <li><img src="img/moon.png" alt="">
+              <li><img src="img/about/change.png" alt=""></li>
+              <li><img src="img/about/moon.png" alt="">
               <p>
                 太陰暦は月の満ち欠けによって年を数える方法。季節のずれを調整した「太陰太陽暦」を1872年まで日本で使われていた。
               </p></li>
-              <li><img src="img/temporalHourSystem.png" alt="">
+              <li><img src="img/about/temporalHourSystem.png" alt="">
                 <p>
                   不定時法。昼と夜をそれぞれ6等分し、一単位を「一刻」とした。昼と夜で一刻の長さが異なり、季節によっても変化する。
                 </p></li>
-              <li><img src="img/moon.png" alt=""></li>
+              <li><img src="img/about/moon.png" alt=""></li>
               <!--/slider--></ul>
           </div>
         </div>
@@ -62,17 +73,17 @@
         <div class="description">
           <div class="dImg flex">
             <div>
-              <img src="img/theme01.png" alt="ツバキの一年の変遷">
+              <img src="img/about/theme01.png" alt="ツバキの一年の変遷">
               <p>１年：ツバキの花芽から種子</p>
             </div>
             <div>
-              <img src="img/theme02.png" alt="アサガオの一日の変遷">
+              <img src="img/about/theme02.png" alt="アサガオの一日の変遷">
               <p>１日：アサガオの開花から閉花</p>
             </div>
           </div>
           <div class="pgraph">
             <h2>植物の時間で<br>時の流れ（一年 /一日）を表す</h2>
-            <p>１年：ツバキの開花から閉花 １日：アサガオの開花から閉花
+            <p>１年：ツバキの開花から閉花<br>１日：アサガオの開花から閉花<br>
               ∵開花には日照（夜の長さ）や気温が関係しているので、環境変化を表す指標として見れる</p>
           </div>
         </div>
@@ -81,11 +92,13 @@
         <h1>目的</h1>
         <div class="description">
           <div class="pgraph">
-            <h2>概日リズムの多様性を意識させる</h2>
-            <p>一つずつの植物のサイクルを意識させる作品を作る。それを重ねることで、一年の流れを見出す。</p>        
+            <h2><ruby>概<rt>がい</rt>日<rt>じつ</rt></ruby>リズム※の多様性を意識させる</h2>
+            <p>一つずつの植物のサイクルを意識させる作品を作る。それを重ねることで、一年の流れを見出す。
+              ※サーカディアン・リズムとも呼ばれる。約25時間周期で変動する生理現象。体内時計ともいう。
+            </p>        
           </div>
           <div class="dImg">
-            <img src="img/aim01.png" alt="ウメ、フジ、フヨウの一年のサイクルを並べた図">
+            <img src="img/about/aim01.png" alt="ウメ、フジ、フヨウの一年のサイクルを並べた図">
             <p>ウメ、フジ、フヨウの一年のサイクルを並べた図</p>
           </div>
         </div>
@@ -94,16 +107,56 @@
         <h1>手段</h1>
         <div class="description">
           <div class="dImg">
-            <img src="./img/UV10-clear.png" alt="UVプリンタを用いた多層印刷の図">
-            <p>UVプリンタを用いた多層印刷</p>
+            <ul class="slider">
+              <li><img src="img/about/method_datajma.png" alt="気象庁生物季節観測の種類">
+              <p>
+                1-1.気象庁生物季節観測の観測対象
+              </p></li>
+              <li><img src="https://nhkbook.s3-ap-northeast-1.amazonaws.com/image/goods/000000402672014/000000402672014_01_234.jpg" alt="">
+                <p>1-2.ＮＨＫ趣味の園芸 よくわかる栽培１２か月シリーズ</p></li>
+              <li><img src="https://images-na.ssl-images-amazon.com/images/I/41ACDKZGE7L.jpg" alt="">
+                  <p>1-3.十亀好雄. ふしぎな花時計 : 身近な花で時間を知ろう. 青木書店, 1996.</p></li>
+              <li><img src="img/about/theme01.png" alt="花芽形成から枯れて種子になるイラスト">
+                    <p>2-1.花芽形成から枯れて種子になるイラスト</p></li>
+              <li><img src="img/about/method_icon.png" alt="花のアイコン">
+                     <p>2-2.花のアイコン</p></li>
+              <li><img src="img/about/method_UVprint.png" alt="UVプリントでの製作">
+                    <p>UVプリントでの製作</p></li>
+              <!--/slider--></ul>
           </div>
-          <div class="pgraph">
-            <h2>多様な情報媒体を用いる</h2>
-            <p>植物のイラストを描いた。</p>
-            <p>本や動画、webなど多様な情報媒体を使い、グラフィカルに表現<br>
-              FAB の利活用の探求</p>
-            <div class="btnContents"><a href="contents/index.html">製作物紹介</a></div>
-          </div>
+            <div class="pgraph">
+              <ol>
+                <li>植物の経時的に変化する情報を集める
+                  <ul>
+                    <li>各花の開花日の情報</li>
+                    <li>花の育成本を参照する</li>
+                    <li>開花を観察した本</li>
+                  </ul>
+                </li>
+                <li>集めたデータを図として描く
+                  <ul>
+                    <li>各花の花芽形成から枯れて種子になるまでのイラスト</li>
+                    <li>花のアイコン作成</li>
+                    <li>花が開くまでの過程のイラスト</li>
+                  </ul>
+                </li>
+                <li>複数の植物を照らし合わせ、見せ方を考える
+                  <ul>
+                    <li>重ねて表示</li>
+                    <li>回転して表示</li>
+                    <li>並べて表示</li>
+                  </ul>
+                </li>
+                <li>多様な情報媒体を使い、グラフィカルに表現
+                  <ul>
+                    <li>本</li>
+                    <li>動画、web</li>
+                    <li>FABを利用したプロダクト製作</li>
+                  </ul>
+                </li>
+              </ol>
+              <div class="btnContents"><a href="contents/index.html">製作物紹介</a></div>
+            </div>
         </div>
       </section> 
     </div>
@@ -115,10 +168,12 @@
   </div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="./js/fullpage.min.js"></script>
+<!-- <script src="./js/fullpage.min.js"></script> -->
+<script src="js/jquery.fullpage.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/about.js"></script>
 </body>
 </html>

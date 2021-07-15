@@ -2,93 +2,116 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>花暦｜製作物</title>
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/content.css">
-</head>
-<body>
-  <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" > -->
   <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/fullpage.min.css">
-  <link rel="stylesheet" href="./css/bgchange.css">
-  <link rel="stylesheet" type="text/css" href="./css/top.css" >
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/content-index.css">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <title>花暦</title>
 </head>
-<header>
-  <nav>
-    <div id="globalnav">
-      <ul>
-        <li><a href="../index.html">TOP</a></li>
-        <li><a href="../about.html">概要</a></li>
-        <li><a href="#">製作物</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+<body>
+  <header>
+    <nav>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+        <ul class="nav-links">
+          <li><a href="../index.html">TOP</a></li>
+          <li><a href="../about.html">概要</a></li>
+          <li><a href="#" class="current">製作物</a>
+            <ul>
+              <li><a href="map/index.html">開花前線の時間</a></li>
+              <li><a href="zukan/index.html" >植物の一年</a></li>
+              <li><a href="clock/index.html" >植物の一日</a></li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+  </header>
   <section>
     <h1>製作物</h1>
-    <p>「開花で見る時間」といっても見方は色々あります。</p>
-    <!-- <div class="container">
-      <div id="cont01" class="content">
-        <h2>日本の一年</h2>
-        <div>
-        </div>
-        <p>
-          aaaaa
-        </p>
-      </div>
-      <div id="cont02" class="content">
-        <h2>植物の一年</h2>
-        <div>
-        </div>
-        <p>
-          aaaaa
-        </p>
-      </div>
-      <div id="cont03" class="content">
-        <h2>植物の一日</h2>
-        <div>
-        </div>
-        <p>
-          aaaaa
-        </p>
-      </div>
-    </div> -->
-    <div class="tab_menu">
-      <div class="wrap_menu">
-        <div class="tab t01" data-tab="t01">
-          <p>日本の一年</p>
-        </div>
-        <div class="tab t02 hidden" data-tab="t02">
-          <p>植物の一年</p>
-        </div>
-        <div class="tab t03 hidden" data-tab="t03">
-          <p>植物の一日</p>
+    <p>「開花で見る時間」を３つの切り口に分けて取り組みました。</p>
+    <div class="container">
+      <div class="cont-container">
+        <h1><span>一</span> 開花前線の時間</h1>
+        <div class="card">
+          <div class="face front">
+            <div class="contImgP">
+              <p>例：桜の開花前線</p>
+              <div class="contImg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Sakura_Zensen.jpg" alt="桜前線の画像">
+              </div>
+              <p class="descImg">出所：<a href="https://www.data.jma.go.jp/sakura/data/index.html">気象庁の生物季節観測</a></p>
+            </div>
+          </div>
+          <div class="face back">
+            <div class="contImgP">
+              <p>日本の開花</p>
+              <div class="contImg">
+                <img src="../img/contents/conts01-back.png" alt="桜前線の画像">
+              </div>
+              <p class="descImg"></p>
+              <p class="descImg btnContents"><a href="./map/index.html">動画と本</a></p>
+              <p class="descImg btnContents"><a href="./map/web.html">web</a></p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-     
-    <div id="t01" class="content_tab display">
-      <h1>開花前線でみる一年</h1>
-      <p><a href="mov.html">映像はこちら</a> </p>
-    </div>
-    <div id="t02" class="content_tab">
-      <h1>植物の一年</h1>
-
-
-    </div>
-    <div id="t03" class="content_tab">
-      <h1>植物の一日</h1>
-      <p><a href="clock.html">WEBバージョン</a></p>
-
+      <div class="cont-container">
+        <h1><span>二</span>  植物の一年</h1>
+        <div class="card">
+          <div class="face front">
+            <div class="contImgP">
+              <p>例：植物園の開花カレンダー</p>
+              <div class="contImg">
+                <img src="../img/contents/conts02.png" alt="小石川植物園の花ごよみの画像">
+              </div>
+              <p class="descImg">出所：<a href="https://www.bg.s.u-tokyo.ac.jp/koishikawa/koyomi/">花ごよみ - 小石川植物園</a> </p>
+            </div>
+          </div>
+          <div class="face back">
+            <div class="contImgP">
+              <p>神奈川の開花</p>
+              <div class="contImg">
+                <img src="../img/contents/conts02-back.png" alt="開花カレンダー">
+              </div>
+              <p class="descImg"></p>
+              <p class="descImg btnContents"><a href="./zukan/index.html">開花カレンダーについて</a></p>
+              <p class="descImg btnContents"><a href="./zukan.html">web版</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont-container">
+        <h1><span>三</span>  植物の一日</h1>
+        <div class="card">
+          <div class="face front">
+            <div class="contImgP">
+              <p>例：リンネの花時計</p>
+              <div class="contImg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Linnaeus%27s_flower_clock.png" alt="リンネの花時計の画像">
+              </div>
+              <p class="descImg"><a href="https://commons.wikimedia.org/wiki/File:Linnaeus%27s_flower_clock.png">リンネの花時計</a></p>
+            </div>
+          </div>
+          <div class="face back">
+            <div class="contImgP">
+              <p>一日花のパタパタ時計</p>
+              <div class="contImg clock">
+                <img src="../img/clock/04.jpg" alt="時計の画像">
+              </div>
+              <p class="descImg"></p>
+              <p class="descImg btnContents"><a href="./clock/index.html">時計について</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+  <script src="../js/common.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="../js/content.js"></script>
+  <!-- <script src="../js/content.js"></script> -->
 </body>
 </html>

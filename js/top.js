@@ -12,19 +12,20 @@
   let d = moment();
 
   function addHide() {
-    asgos.forEach((asgos,index) => {
-      asgos.classList.add('hide');
+    asgos.forEach((asgo) => {
+      asgo.classList.add('hide');
     });
   }
 
   function checkSeasons(){
     //季節判定 0起点
-    let getSeasons = now.getMonth();
-    if((getSeasons >= 4) && (getSeasons < 5)) { 
+    let getSeasons = now.getMonth() + 1;
+    console.log(getSeasons);
+    if((getSeasons >= 4) && (getSeasons < 6)) { 
       addHide();
       asgo01.classList.remove('hide');
       asgo01.classList.add('nowMonth'); }
-    else if( (getSeasons >= 5) && (getSeasons < 6) ) { 
+    else if( (getSeasons >= 5) && (getSeasons < 7) ) { 
       addHide();
       asgo02.classList.add('nowMonth'); }
     else if( getSeasons === 7 ) { 

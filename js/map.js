@@ -17,7 +17,7 @@
   }
 
   function setFlower(locIndex, iconNum) {
-    locs[locIndex].setAttribute('src', `../img/map/icon${iconNum}.svg`);
+    locs[locIndex].setAttribute('src', `../../img/map/icon${iconNum}.svg`);
     locs[locIndex].classList.add('iconShow');
     icons[iconNum-1].classList.remove('svgColor');
   }

@@ -1,0 +1,13 @@
+.top img {
+  object-position: 50% 30%;
+}
+
+.flex3 {
+  flex: 3;
+}
+
+.trim {
+  height: 60vh;
+  width: 60vh;
+  object-fit: cover;
+}

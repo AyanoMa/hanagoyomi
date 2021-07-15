@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" > -->
   <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/fullpage.min.css">
   <link rel="stylesheet" href="./css/bgchange.css">
   <link rel="stylesheet" type="text/css" href="./css/top.css" >
   <title>花暦</title>
@@ -15,13 +13,22 @@
 <body id="bg">
   <header>
     <nav>
-      <div id="globalnav">
-        <ul>
-          <li><a href="#">TOP</a></li>
-          <li><a href="about.html">概要</a></li>
-          <li><a href="contents/index.html">製作物</a></li>
-        </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
+        <ul class="nav-links">
+          <li><a class="current" href="#">TOP</a></li>
+          <li><a href="about.html">概要</a></li>
+          <li><a href="contents/index.html">製作物</a>
+            <ul>
+              <li><a href="contents/map/index.html">開花前線の時間</a></li>
+              <li><a href="contents/zukan/index.html" >植物の一年</a></li>
+              <li><a href="contents/clock/index.html" >植物の一日</a></li>
+            </ul>
+          </li>
+        </ul>
     </nav>
   </header>
   <main>
@@ -992,35 +999,26 @@
         </section>
       <section id="modal" class="hidden">
         <p><a href="about.html">この卒業制作について</a></p>
-        <nav>
-          <!-- <ul>
-            <li><a href="about.html#overview/0">概要</a></li>
-            <li><a href="about.html#theme/1">題材</a></li>
-            <li><a href="about.html#aim/2">目的</a></li>
-            <li><a href="about.htmlmethod/3">手段</a></li>
-          </ul> -->
-        </nav>
-        <p><a href="contents/index.html">製作物</a></p>
-        <nav>
-          <ul>
-            <li><a href="contents/mov.html">開花前線の一年</a></li>
-            <li>花の一年</li>
-            <li>花の一日</li>
-          </ul>
-        </nav>
+        <div class="contentNav">
+          <p><a href="contents/index.html">製作物</a></p>
+          <nav>
+            <ul>
+              <li><a href="contents/map/index.html">開花前線の一年</a></li>
+              <li><a href="contents/zukan/index.html">花の一年</a></li>
+              <li><a href="contents/clock/index.html">花の一日</a></li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
   </main>
-      <!-- <footer>
-        @ayano matsuda 2021
-      </footer> -->
   
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ja.min.js" integrity="sha512-rElveAU5iG1CzHqi7KbG1T4DQIUCqhitISZ9nqJ2Z4TP0z4Aba64xYhwcBhHQMddRq27/OKbzEFZLOJarNStLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="./js/bgchange.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/top.js"></script>
-<script src="./js/openWeatherMap.js"></script>
 </body>
 </html>

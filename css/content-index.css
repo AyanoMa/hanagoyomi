@@ -1,0 +1,129 @@
+body {
+  background:linear-gradient(45deg, rgba(206,221,219,.5) 0%, rgba(206,250,219,.5) 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 96vw;
+  margin: 0 auto;
+  padding: 100px 20px 10px;
+  height: 100vh;
+}
+
+.cont-container{
+  padding: 10px 0;
+  position: relative;
+  width: 32%;
+  height: 500px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  perspective:  1000px;
+}
+
+.card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(255,255,255,.5);
+  border-left: 2px solid rgba(255,255,255,.5);
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+.card .face.back {
+  transform: rotateY(180deg);
+  user-select: none;
+}
+
+.cont-container:hover .card .face.front{
+  transform: rotateY(180deg);
+  user-select: none;
+}
+.cont-container:hover .card .face.back{
+  transform: rotateY(360deg);
+  user-select: auto;
+}
+
+
+
+.container div > div.contImgP {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.container .contImg {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  max-width: 300px;
+  background: #fff;
+  border: 1px solid darkgray;
+}
+.container .contImg.clock {
+  background: #C0C3C2;
+}
+
+
+.container img {
+  width: 100%;
+}
+
+.container > .cont-container  h1 {
+  font-family: 'Courier New', Courier, monospace;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+  top: -5%;
+  left: -3%;
+  z-index: 100;
+  pointer-events: none;
+}
+span {
+  position: absolute;
+  top: -60px;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, .3);
+  /* color: white;
+  height: 100px;
+  width: 100px; */
+  /* background: rgba(0, 0, 0, .6); */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 767px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 0 auto;
+  }
+  .cont-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+  }
+}

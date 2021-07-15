@@ -1,0 +1,28 @@
+.paperColor span:nth-child(1){
+ background:#E4E4EE;
+}
+.paperColor span:nth-child(2){
+ background:#fff;
+}
+.paperColor span:nth-child(3){
+ background:#FEE6E5;
+}
+.paperColor span:nth-child(4){
+ background:#FDD2D2;
+}
+.paperColor span:nth-child(5){
+ background:#FED7C5;
+}
+.paperColor span:nth-child(6){
+ background:#EBF787;
+}
+.paperColor span:nth-child(7){
+ background:#E0E7F2;
+}
+.paperColor span:nth-child(8){
+ background:#FEFFCB;
+}
+
+.flex3 {
+  flex:3;
+}

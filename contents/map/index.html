@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>開花の一年 - 花暦</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> 
+<link rel="stylesheet" href="../../css/clock-index.css">
+<link rel="stylesheet" href="../../css/map-index.css">
+<link rel="stylesheet" href="../../css/slider.css">
+<link rel="stylesheet" type="text/css" href="../../css/cal_mov.css">
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+        <ul class="nav-links">
+          <li><a href="../../index.html">TOP</a></li>
+          <li><a href="../../about.html">概要</a></li>
+          <li><a href="../index.html" class="current">製作物</a>
+            <ul>
+              <li><a href="#" class="current">開花前線の時間</a></li>
+              <li><a href="../../contents/zukan/index.html" >植物の一年</a></li>
+              <li><a href="../../contents/clock/index.html" >植物の一日</a></li>
+            </ul>
+        </li>
+        </ul>
+    </nav>
+  </header>
+<button id="mute" class="Mute">音</button>
+  <section id="cal_mov">
+    <div id="loading">Loading...</div>
+    <div id="youtube-area">
+      <!-- <h1>花暦</h1> -->
+      <div id="youtube"></div><!--youtube表示エリア-->
+      <div id="youtube-mask"></div><!--youtubeマスクエリア-->
+    </div>
+  </section>
+  <div id="container">
+    
+    <section class="descMaking">
+      <h1>開花前線の時間</h1> 
+      <div>
+        <h2>データについて</h2>
+        <div class="material">
+          <div>
+            <p>気象庁の季節観測の開花日（リンク）の平年値をもとに、作成しています。<br>
+              ２７種類の植物の開花日を比較しています。
+              12/1から11/30まで時間で進めて表現しています。<br>
+              また、動物季節観測の情報から、鳥の声や虫の声も追加してあります。     
+              </p>
+          </div>
+          <div>
+            <img src="../../img/map/map-data.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>アイコン</h2>
+        <div class="material">
+          <div>
+            <p>各植物のアイコンを作成しました。 <br> 
+              各地点に花のアイコンを表示させることで開花を表しました。 
+              </p>
+          </div>
+          <div>
+            <img src="../../img/map/花紋-color.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="descProduct">
+      
+        <div>
+          <h2>本の製作</h2>
+          <div class="mov">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1OpIRHY7OCg?autoplay=1&modestbranding=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>同じ題材で本も作成しました。
+              一日一枚３６５ページあります。
+              先頭に表紙→地点の説明を挟んでいます。
+              </p>
+          </div>
+        </div>
+        <div class="photo">
+          <div >
+            <ul class="slider">
+              <li><img src="../../img/map/map02.jpg" alt="">
+                <p></p></li>
+              <li><img src="../../img/map/map04.jpg" alt="">
+                <p></p></li>
+              <li><img src="../../img/map/map05.jpg" alt="">
+                <p></p></li>
+              <li><img src="../../img/map/map06.jpg" alt="">
+                <p></p></li>
+              <li><img src="../../img/map/map07.jpg" alt="">
+                <p></p></li>
+              <!--/slider--></ul>
+          </div>
+        </div>
+    </section>
+    <section class="descMaking">
+        <div>
+          <h2>ページ内容</h2>
+          <div>
+            <div class="flex3">
+            <img src="../../img/map/map-page.png" alt="ページの内容についての図">
+            </div>
+            <div>
+              <p>日本地図上の地点に花のアイコンをおいています。<br>下にアイコンとその花の名前をのせています。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>ページ内容</h2>
+          <div>
+            <div class="flex3">
+            <img src="../../img/map/map03.jpg" alt="">
+            </div>
+            <div class="paperColor">
+              <p>３ヶ月で一冊、合計4冊です。
+                側面のグラデーションは季節のイメージに合わせて変化します。合計８色の色上質紙を使っています。<span>うすむらさき</span>、<span>白</span>、<span>さくら</span>、<span>桃</span>、<span>サーモン</span>、<span>もえぎ</span>、<span>みず</span>、<span>レモン</span>。      
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/cal_mov.js"></script>
+<script src="../../js/clock-index.js"></script>
+</body>
+</html>
