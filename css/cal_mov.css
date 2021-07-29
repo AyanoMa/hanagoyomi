@@ -109,12 +109,48 @@ height: 50vw;
   line-height: 30px;
   cursor: pointer;
 }
+#mute::before{
+  content: '';
+  top: 0;
+  right: -2px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255,255,255);
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+}
 
 #mute.Mute{
   color: #666;
   border-color: #666;
 }
 
+#mute.sound::before {
+  display: block;
+  top: 300;
+  border: 1px solid rgba(255,255,255);
+  opacity: 1;
+  transform-origin: center;
+  animation: 6s circle linear infinite;
+}
+
+@keyframes circle {
+  0%{
+    transform: scale(0);
+  }
+  20%{
+    transform: scale(2);
+    opacity: 0;
+  }
+  80%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 
 
 @media screen and (max-width:767px) {

@@ -54,8 +54,11 @@ $(function() {
           ytPlayer.mute();
          }
     }
+    targetNode.classList.toggle('sound');
 });
 });
+
+
 
 //ループ設定
 function onPlayerStateChange(event) {

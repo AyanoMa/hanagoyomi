@@ -28,6 +28,7 @@ body {
   transform-style: preserve-3d;
   backface-visibility: hidden;
   perspective:  1000px;
+  /* cursor: pointer; */
 }
 
 .card .face {
@@ -47,15 +48,28 @@ body {
 .card .face.back {
   transform: rotateY(180deg);
   user-select: none;
+  pointer-events: none;
 }
 
-.cont-container:hover .card .face.front{
+/* .cont-container:hover .card .face.front{
   transform: rotateY(180deg);
   user-select: none;
 }
 .cont-container:hover .card .face.back{
   transform: rotateY(360deg);
   user-select: auto;
+} */
+.card .face.front.clicked{
+  transform: rotateY(180deg);
+  user-select: none;
+  pointer-events: none;
+  /* cursor: auto; */
+}
+.card .face.back.clicked{
+  transform: rotateY(360deg);
+  user-select: auto;
+  /* cursor: auto; */
+  pointer-events: auto;
 }
 
 
@@ -79,6 +93,9 @@ body {
 }
 .container .contImg.clock {
   background: #C0C3C2;
+}
+.container .contImg.calender {
+  background: #e7e7e9;
 }
 
 

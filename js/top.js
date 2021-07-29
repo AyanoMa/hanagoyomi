@@ -20,7 +20,6 @@
   function checkSeasons(){
     //季節判定 0起点
     let getSeasons = now.getMonth() + 1;
-    console.log(getSeasons);
     if((getSeasons >= 4) && (getSeasons < 6)) { 
       addHide();
       asgo01.classList.remove('hide');
@@ -55,6 +54,12 @@
       modal.classList.toggle('hidden');
     });
 
+    
+
   }
+
+  window.addEventListener('load', () => {
+    mouseCursor.style.backgroundImage = `url(./img/map/icon${a}.svg)`;
+  });
 
 

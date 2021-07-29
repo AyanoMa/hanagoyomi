@@ -41,3 +41,7 @@ $('.slider').slick({
   variableWidth: true,//幅の違う画像の高さを揃えて表示
   dots: true,//下部ドットナビゲーションの表示
 });
+
+window.addEventListener('load', () => {
+  mouseCursor.style.backgroundImage = `url(./img/map/icon${a}.svg)`;
+});

@@ -6,6 +6,10 @@
   text-decoration: none;
   font-family: "Sawarabi Mincho" ,serif;
   color: #333;
+  cursor: none;
+}
+body {
+  cursor: none;
 }
 
 header .nav-links {
@@ -19,7 +23,7 @@ header .nav-links {
 }
 
 header .nav-links li {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 header .nav-links li a{
@@ -35,7 +39,7 @@ header .nav-links li a{
   letter-spacing: 0.5px;
   border-right: none;
   border-radius: 0%;
-  cursor: pointer;
+  /* cursor: pointer; */
   transform: translateX(0);
   transform-origin: right;
   transition: .2s ease-in;
@@ -50,7 +54,7 @@ header .nav-links li a::before{
   background: rgba(255,255,255,.2);
   border: 1px solid #333;
   border-right: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   transform: scaleX(1);
   transform-origin: right;
   transition: .2s;
@@ -80,7 +84,7 @@ header .nav-links li > ul > li.touchTab a:hover
 
 header .burger {
   display: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 200;
   padding: 20px;
   position: fixed;
@@ -131,7 +135,7 @@ header .burger div {
     line-height: 1;
     letter-spacing: 0.5rem;
     border: none;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
   header .nav-links li a::before{
     display: none;
@@ -205,10 +209,9 @@ header  .nav-links.nav-active {
 .btnContents {
   /* padding-top: .5rem; */
   color: #647516;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: .2s;
   transition: transform .5s ease;
-  cursor: pointer;
 }
 .btnContents::after{
   content: ' →';
@@ -219,6 +222,95 @@ header  .nav-links.nav-active {
 }
 
 .btnContents a{
+  padding: 1rem;
   color: #647516;
 }
 
+/* cursor */
+.cursor {
+  background: url(../img/map/icon1.svg);
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  /* border: 1px solid rgba(255,255,255,.1); */
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+  pointer-events: none;
+  transition: all 1s ease;
+  transition-property: background, transform;
+  transform-origin: center;
+  opacity: .8;
+  animation: 10s circlebloom ease infinite;
+  transform: scale(1);
+  background-position: center;
+}
+.cursor::before {
+  content: '';
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 50%;
+  top: 0;
+  animation: 4s circlewave linear infinite;
+}
+
+.link-grow {
+  filter: blur(2px);
+  transform: scale(2);
+  /* background: rgba(255,255,255,.3); */
+}
+
+.blinking{
+  background: rgba(255,255,150,.8);
+  background: transparent;
+  /* border: 2px solid rgba(255,255,200,.8);
+  border: 2px solid rgba(166, 215, 157, 0.7); */
+  transform-origin: center;
+  /* animation: 1.5s circlewave linear infinite; */
+  animation: 3s circlelotate ease infinite;
+}
+
+@keyframes circlewave {
+  0%{
+    transform: scale(0.7);
+  }
+  20%{
+    transform: scale(2);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes circlelotate {
+  0%{
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes circlebloom {
+  0%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(360deg);
+  }
+  20%{
+    transform: rotate(0deg);
+  }
+  90%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
